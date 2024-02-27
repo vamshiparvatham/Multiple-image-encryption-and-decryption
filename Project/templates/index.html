@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <title>Image Encryption/Decryption</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-title">
+            <h2>
+                <a href="/"><img src="../static/Logo.png" alt="Logo"></a>
+            </h2>
+            
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a class="active" href="/main">Encrypt</a>
+            <a href="/about">About</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/algo">Algorithm</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    
+
+    <div class="note">
+        <div class="note-container">
+            <h4 style="font-size: 14px;"><b>Note:</b></h4>
+            <li>Key must be same for getting original image for decryption</li>
+            <li>Since DNA encoding process is time consuming , please wait while encryption and decryption</li>
+            <li>For large images it takes 3-5 minutes for encryption and Decryption</li>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <form id="encryptionForm" action="/encryption" method="post" enctype="multipart/form-data">
+
+            <label for="file">Select Image:</label>
+            <div class="input-fileImage">
+                <input type="file" name="file" accept=".bmp, .png, .jpg, .jpeg" multiple required>
+                <p>PNG,JPG,JPEG,WEBP(image size 0-1 MB,pixels 0-500)</p>
+            </div>
+            <label for="key">Key:</label>
+            <input type="password" name="key" required>
+            <label for="encrypt">Encrypt (1) / Decrypt (0):</label>
+            <input type="number" name="encrypt" min="0" max="1" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- loader -->
+    <div id="loader" style="display: none;">
+        <img src="../static/Loader.gif" alt="Loader">
+        <p>Image Processing.Please Wait</p>
+    </div>
+
+
+    <!-- <div class="selectedImagesDisplay"></div> -->
+    <div id="imageDisplayContainer"></div>
+
+    <div id="dimmed-overlay"></div>
+    <div class="footer">
+        <p class="rights">All Rights Reserved &copy; 2023 Kmit</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        function displayImage(imageBase64, imageId, downloadId) {
+            const imageElement = $(`#${imageId}`);
+            imageElement.attr('src', `data:image/bmp;base64,${imageBase64}`);
+            imageElement.css('display', 'block');
+
+            const downloadButton = $(`#${downloadId}`);
+            downloadButton.css('display', 'block');
+        }
+
+        function addImageContainers(numImages) {
+            const displayContainer = $('#imageDisplayContainer');
+
+            for (let i = 0; i < numImages; i++) {
+                const containerHtml = `
+                <div class="display-container">
+                    <div class="display">
+                        <img id="originalImage${i}" src="#" alt="Original Image" style="display:none; max-width: 150px; width: 150px;">
+                        <img id="outputImage${i}" src="#" alt="Output Image" style="display:none; max-width: 150px; width: 150px;">
+                    </div>
+                    <a id="downloadButton${i}" style="display:none;">Download</a>
+                </div>
+                `;
+                displayContainer.append(containerHtml);
+            }
+        }
+
+        $('#encryptionForm').submit(function (event) {
+            event.preventDefault();
+
+            $('#loader').show();
+            $('#dimmed-overlay').show();
+
+            $.ajax({
+                url: '/encryption',
+                method: 'POST',
+                data: new FormData(this),
+                contentType: false,
+                processData: false,
+                success: function (responses) {
+                    console.log(responses);
+                    $('#loader').hide();
+                    $('#dimmed-overlay').hide();
+
+
+                    addImageContainers(responses.length);
+
+                    for (let i = 0; i < responses.length; i++) {
+                        const response = responses[i];
+                        const originalImageId = `originalImage${i}`;
+                        const outputImageId = `outputImage${i}`;
+                        const downloadButtonId = `downloadButton${i}`;
+
+                        displayImage(response.original_img, originalImageId, downloadButtonId);
+                        displayImage(response.output_img, outputImageId, downloadButtonId);
+
+                        const downloadButton = $(`#${downloadButtonId}`);
+                        downloadButton.addClass('download-link');
+                        downloadButton.attr('href', `data:image/png;base64,${response.output_img}`);
+                        downloadButton.attr('download', `output_image_${i}.png`);
+                        downloadButton.on('click', function () {
+                            downloadButton.off('click');
+                            downloadButton.css('display', 'none');
+                        });
+                    }
+                    $('#encryptionForm')[0].reset();
+                },
+                error: function (error) {
+                    console.log("Error", error);
+                    $('#loader').hide();
+                    $('#dimmed-overlay').hide();
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

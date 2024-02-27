@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Gallery.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <title>Gallery</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-title">
+            <h2>
+                <a href="/"><img src="../static/Logo.png" alt="Logo"></a>
+            </h2>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/main">Encrypt</a>
+            <a href="/about">About</a>
+            <a class="active" href="/gallery">Gallery</a>
+            <a href="/algo">Algorithm</a>
+            <a href="/">Contact</a>
+        </div>
+    </nav>
+
+    <header class="header-section">
+        <div class="header-container">
+            <div class="main-header">
+                <h2>Image Gallery Of Results</h2>
+            </div>
+        </div>
+    </header>
+
+    <main class="gallery-section">
+        <div class="container">
+            <div class="example">
+                <div class="title-gallery"><h2>Encryption And Decryption of Image With <span>Correct</span> Key</h2></div>
+                <div class="images-gallery">
+                    <div class="img-container">
+                        <img src="../static/Assets/correctOriginal1.jpg" alt="origial">
+                        <h2>Original Image</h2>
+                    </div>
+                    <div class="img-container">
+                        <img src="../static/Assets/correctEncrypt1.bmp" alt="encrypted">
+                        <h2>Encrypted Image</h2>
+                    </div>
+                    <div class="img-container">
+                        <img src="../static/Assets/correctDecrypt1.jpg" alt="Decrypted">
+                        <h2>Decrypted Image</h2>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="example">
+                <div class="title-gallery"><h2>Encryption And Decryption of Image With <span>Wrong</span> Key</h2></div>
+                <div class="images-gallery">
+                    <div class="img-container">
+                        <img src="../static/Assets/wrongOriginal1.jpeg" alt="origial">
+                        <h2>Original Image</h2>
+                    </div>
+                    <div class="img-container">
+                        <img src="../static/Assets/wrongEncrypt1.png" alt="encrypted">
+                        <h2>Encrypted Image</h2>
+                    </div>
+                    <div class="img-container">
+                        <img src="../static/Assets/wrongDecrypt1.jpeg" alt="Decrypted">
+                        <h2>Decrypted Image</h2>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+        <p class="rights">All Rights Reserved &copy; 2023 Kmit</p>
+    </div>
+    
+</body>
+</html>

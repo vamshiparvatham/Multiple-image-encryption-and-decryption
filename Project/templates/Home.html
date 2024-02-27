@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Home.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+    <title>Image Processing</title>
+    
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-title">
+            <h2>
+                <a href="/"><img src="../static/Logo.png" alt="Logo"></a>
+            </h2>
+            
+        </div>
+        <div class="nav-links">
+            <a class="active" href="/">Home</a>
+            <a href="/main">Encrypt</a>
+            <a href="/about">About</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/algo">Algorithm</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="../static/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header class="main-header">
+        <div class="header-content">
+            <h2>Multi-Image Encryption && Decryption</h2>
+            <h3>Using Chaotic functions and Central Dogma</h3>
+            <div class="btns">
+                <a href="/main">Process</a>
+                <a href="/algo">Learn</a>
+            </div>
+        </div>
+    </header>
+
+   
+    <main class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+    
+        <div class="faq-container">
+            <div class="faq-main">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3>What encryption algorithm does this code use for image protection?</h3>
+                    <p>The code employs a combination of chaotic functions, DNA encoding, and Rényi maps for robust image encryption.</p>
+                </div>
+    
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3>How is the encryption key generated in this image security process?</h3>
+                    <p>The encryption key is derived from the SHA-256 hash of a user-provided key, ensuring a secure and unique starting point for encryption.</p>
+                </div>
+    
+                <!-- Card 3 -->
+                <div class="card">
+                    <h3>Can you explain the role of chaotic functions in image encryption?</h3>
+                    <p>Chaotic functions introduce unpredictability and complexity, enhancing the security of the image encryption process.</p>
+                </div>
+    
+                <!-- Card 4 -->
+                <div class="card">
+                    <h3>What is the significance of DNA encoding in image encryption and decryption?</h3>
+                    <p>DNA encoding is utilized to represent and manipulate image data, contributing to the uniqueness and complexity of the encryption process.</p>
+                </div>
+    
+                <!-- Card 5 -->
+                <div class="card">
+                    <h3>How does the code handle different color channels (RGB) during encryption and decryption?</h3>
+                    <p>The code processes each color channel (R, G, B) separately using Rényi maps and chaotic functions, ensuring comprehensive image security.</p>
+                </div>
+    
+                <!-- Card 6 -->
+                <div class="card">
+                    <h3>Is the encryption process reversible, allowing for image decryption with the correct key?</h3>
+                    <p>Yes, the provided logic supports both encryption and decryption, ensuring reversibility with the appropriate encryption key.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="contact" class="contact-container">
+        <div class="contact-info">
+            <h2>Write Us Here</h2>
+            <p>Address: Narayanguda , Hyderabad , Telangana</p>
+            <p>Phone: 9347015153</p>
+            <p>Email: su5457925@gmail.com</p>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="https://getform.io/f/f48ce2a4-8b19-423f-9bf7-3c3fad919d89" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="rights">All Rights Reserved &copy; 2023 Kmit</p>
+    </div>
+</body>
+</html>

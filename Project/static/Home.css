@@ -1,0 +1,239 @@
+
+#backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Place the video behind other elements */
+}
+
+.main-header {
+    position: relative;
+    height: 450px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    z-index: 1; /* Place the content on top of the video */
+}
+
+
+.header-content h2 {
+    font-size: 2.5em;
+    font-weight: 800;
+    letter-spacing: normal;
+}
+
+.header-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 35px;
+}
+
+.header-content a {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff8c27;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin: 3px;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+
+}
+.header-content a:hover{
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid orange;
+}
+
+
+
+
+/* FAQ Section Styles */
+.faq-section {
+    text-align: center;
+    padding: 40px;
+}
+
+.faq-section h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 10px; /* Add position relative to the h2 */
+}
+
+.faq-section h2:after {
+    content: "";
+    width: 400px; /* Set the width as needed */
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Set left to 50% */
+    transform: translateX(-50%); /* Move the underline back by half of its width to center it */
+    border-bottom:3px solid orange;
+}
+
+.faq-container {
+    display: flex;
+    justify-content: center;
+}
+
+.faq-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Card Styles */
+.card {
+    flex: 0 0 calc(33.33% - 20px); /* Three items per row with 20px gap */
+    max-width: calc(33.33% - 20px); /* Adjusting for the gap */
+    box-sizing: border-box;
+}
+@media screen and (max-width: 1020px) {
+    .card {
+        flex: 0 0 calc(50% - 20px); /* Two items per row with 20px gap */
+        max-width: calc(50% - 20px); /* Adjusting for the gap */
+    }
+}
+
+/* Additional responsiveness for even smaller screens if needed */
+@media screen and (max-width: 720px) {
+    .card {
+        flex: 0 0 100%; /* One item per row */
+        max-width: 400px;
+        width: 400px;
+        margin: auto;
+    }
+}
+.card {
+    padding: 30px;
+    background-color: #ff6a0d;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.682);
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid orange;
+    cursor: pointer;
+}
+.card:hover h3{
+    border-bottom: 2px solid white;
+    /* padding-bottom: 6px; */
+}
+.card h3{
+    font-size: 0.8em;
+    width: 250px;
+    text-align: left;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 6px;
+    
+    
+
+}
+
+.card p{
+    font-size: 0.9em;
+    width: 255px;
+    text-align: left;
+    line-height: 1;
+}
+
+/* contact */
+
+
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.076);
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.682);
+
+
+    
+}
+.contact-container:hover{
+    transform: translateY(-5px);
+
+    background-color: #ff6a0d;
+}
+.contact-container:hover input[type="submit"]{
+
+
+    background-color: wheat;
+    color: #ff6a0d;
+}
+
+.contact-info {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.contact-form {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  
+    font-size: 25px;
+    margin-bottom: 20px;
+
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 15;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #ff6a0d;
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+
+    color: #fff;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff6a0d93;
+}
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='Algorithm.css') }}">
+
+    <title>Algorithm</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-title">
+            <h2>
+                <a href="/"><img src="../static/Logo.png" alt="Logo"></a>
+            </h2>
+
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/main">Encrypt</a>
+            <a href="/about">About</a>
+            <a href="/gallery">Gallery</a>
+            <a class="active" href="#">Algorithm</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header class="Algorithm">
+        <div class="algorithm-head">
+            <h2>Algorithm for Multi-Image Encryption And Decryption</h2>
+        </div>
+    </header>
+
+    <main class="main-section">
+        <div class="algo-container padding">
+            <div class="description">
+                <h2>Image Encryption</h2>
+                <p>Image encryption refers to the process of converting the content of an image into a secure and
+                    unreadable form, making it difficult for unauthorized individuals to access or understand the image
+                    without the appropriate decryption key. Encryption is a vital technique for ensuring the
+                    confidentiality and integrity of sensitive images, especially during storage, transmission, or when
+                    shared across insecure channels.
+                </p>
+                <p>Image encryption algorithms employ various cryptographic techniques to transform the pixel values or
+                    the binary representation of an image into a cipher text. The encryption process typically involves
+                    the following steps:
+                </p>
+            </div>
+            <div class="steps">
+                <h2>Steps For Encryption And Decryption</h2>
+                <div class="step">
+                    <p><span>Key Generation : </span> A secret encryption key is generated, which is known only to the
+                        authorized parties involved in the encryption and decryption process.</p>
+                    <p><span>Pixel Transformation : </span> The pixels of the image are modified using mathematical
+                        operations such as substitution, permutation, bit-shifting, or matrix transformations. These
+                        operations alter the pixel values based on the encryption key, making the encrypted image appear
+                        random and unintelligible.
+                    </p>
+                    <p><span>Encryption Algorithm : </span> A specific encryption algorithm is applied to the
+                        transformed pixels, which scrambles the data further and generates the cipher text.
+                    </p>
+                    <p><span>Cipher Text Generation : </span> The cipher text is the encrypted version of the original
+                        image. It contains the transformed pixel values and metadata required for decryption.
+                    </p>
+                    <p class="divison">Reverse the Process for Decryption of Image with same key used for Encryption</p>
+                    <p><span>Key Sharing : </span> The authorized recipient of the encrypted image receives the encryption key securely from the sender.</p>
+                    <p><span>Decryption Algorithm :</span> The decryption algorithm, which is the inverse of the encryption algorithm, is applied to the cipher text using the encryption key. This algorithm undoes the transformations applied during encryption, restoring the original pixel values.</p>
+                    <p><span>Pixel Restoration :</span> The decrypted pixel values are transformed back to their original positions and values, reconstructing the original image.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="algorithm padding">
+            <div class="container-algorithm">
+                <div class="encrypt">
+                    <div class="head">
+                        <h2>Encryption</h2>
+                    </div>
+                    <div class="brief">
+                        <p>1. Get Image and Key from User</p>
+                        <p>2. Convert key to hash using SHA-256 algorithm</p>
+                        <p>3. Get Initial values of Chaotic functions from hash</p>
+                        <p>4. Generate Ranyi and Tent Sequence</p>
+                        <p>5. Generate Key Image</p>
+                        <p>6. Encode Key Image</p>
+                        <p>7. Encode Original Image</p>
+                        <p>8. Generate Intermediate Encoded Image using Binary Operations</p>
+                        <p>9. Decode Intermediate Image</p>
+                    </div>
+                </div>
+                <div class="decrypt">
+                    <div class="head">
+                        <h2>Decryption</h2>
+                    </div>
+                    <div class="brief">
+                        <p>1. Get Encrypted Image and Key from User</p>
+                        <p>2. Convert key to hash using SHA-256 algorithm</p>
+                        <p>3. Get Initial values of Chaotic functions from hash</p>
+                        <p>4. Generate Ranyi and Tent Sequence</p>
+                        <p>5. Generate Key Image</p>
+                        <p>6. Encode Key Image</p>
+                        <p>7. Encode Encrypted Image</p>
+                        <p>8. Generate Intermediate Encoded Image using reverse Binary Operations</p>
+                        <p>9. Decode Intermediate Image</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="pros-cons padding">
+            <div class="pros-cons-container">
+                <div class="head"><h2>Pros And Cons of Algorithm :</h2></div>
+                <div class="pros">
+                    <h3>Pros:</h3>
+                    <li>Comparing with other type of encryption, this method is more secure.</li>
+                    <li>SHA-256 provides one extra layer of security , Because SHA-256 is not reversible.</li>
+                </div>
+                <div class="cons">
+                    <h3>Cons:</h3>
+                    <li>SHA-256 takes 2256 bits of memory and it is time consuming.</li>
+                    <li>Overall time required to perform the algorithm is high.</li>
+                </div>
+            </div>
+
+        </div>      
+    </main>
+    <div class="footer">
+        <p class="rights">All Rights Reserved &copy; 2023 Kmit</p>
+    </div>
+
+</body>
+
+</html>

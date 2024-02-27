@@ -1,0 +1,173 @@
+body {
+    
+    text-align: center;
+} 
+.form-section {
+    margin-top: 30px;
+}
+
+form {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
+    /* margin-top: 60px; */
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: black;
+}
+
+button {
+    background-color: #fa9922e9;
+    color: white;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+button:hover {
+    background-color: #ffa22800;
+    border: 2px solid orange;
+    color: orange;
+}
+
+img :not(.nav-tile img){
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+}
+.display-container{
+    padding: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.698);
+    max-width: 370px;
+    margin: 33px auto;
+    border-radius: 22px;
+
+}
+.display {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 300px;
+    margin: 40px auto;
+}
+
+.download-link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff6a0d;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+    max-height: 20px;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.download-link:hover {
+    background-color: #b8720100;
+    color: #ff6a0d ;
+    border: 2px solid #ff6a0d;
+
+}
+#imageDisplayContainer a{
+    width: 120px;
+    margin: 12px auto;
+}
+
+
+
+/* loader for image */
+
+#dimmed-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#loader img {
+    display: block;
+    margin: 0 auto;
+    animation: rotate 1s linear infinite;
+    width: 100px;
+}
+.input-fileImage p{
+    font-size: 12px;
+    color: rgb(90, 89, 89);
+    letter-spacing: normal;
+    text-align: left;
+    margin: 0;
+}
+
+.input-fileImage{
+    margin-bottom: 12px;
+}
+/* .note-container{
+    background:none;
+    padding: 15px;
+} */
+.note{
+    text-align: left;
+    max-width: 380px;
+    margin: 12px auto;
+    letter-spacing: normal;
+    font-size: 12px;
+    line-height: normal;
+    background-color: rgba(103, 52, 52, 0.476);
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) ;
+
+}
+.note li{
+    margin: 4px;
+}

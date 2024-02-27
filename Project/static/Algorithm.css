@@ -1,0 +1,157 @@
+
+
+header.Algorithm {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.682);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.algorithm-head h2 {
+    margin: 0;
+}
+
+.main-section {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+
+}
+
+.algo-container {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.682);
+
+}
+
+.description h2 {
+    color: #ffffff;
+}
+.description h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px; /* Adjust the margin as needed for the desired distance */
+    position: relative;
+    display: inline-block;
+}
+
+.description h2::after {
+    content: "";
+    position: absolute;
+    bottom: -7px; /* Adjust this value for the desired distance */
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid #ff6a0d;
+    width: 45%;
+}
+
+.description p {
+    line-height: 1.4;
+
+}
+
+.steps {
+    margin-top: 20px;
+    
+
+}
+
+.step p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.step span {
+    font-weight: bold;
+    color: #ffffff;
+}
+.step span {
+    font-size: 1rem;
+    margin-bottom: 15px; /* Adjust the margin as needed for the desired distance */
+    position: relative;
+    display: inline-block;
+}
+
+.step span::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjust this value for the desired distance */
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid orange;
+    width: 45%;
+}
+.algorithm{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.682);
+
+}
+.container-algorithm h2 {
+    font-size: 2rem;
+    margin-bottom: 15px; /* Adjust the margin as needed for the desired distance */
+    position: relative;
+    display: inline-block;
+}
+
+.container-algorithm h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjust this value for the desired distance */
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid orange;
+    width: 45%;
+}
+.steps h2 {
+    font-size: 2rem;
+    margin-bottom: 15px; /* Adjust the margin as needed for the desired distance */
+    position: relative;
+    display: inline-block;
+}
+
+.steps h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjust this value for the desired distance */
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid orange;
+    width: 45%;
+}
+.pros-cons{
+    margin: 66px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.682);
+
+}
+.pros-cons h2{
+    font-size: 2rem;
+    margin-bottom: 15px; /* Adjust the margin as needed for the desired distance */
+    position: relative;
+    display: inline-block;
+}
+.pros-cons h2::after{
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjust this value for the desired distance */
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid orange;
+    width: 45%;
+}
+.pros-cons-container li{
+    margin: 12px auto;
+}
+.divison{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 33px auto;
+}
+.padding{
+    padding: 44px;
+    margin: 44px auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+
+}

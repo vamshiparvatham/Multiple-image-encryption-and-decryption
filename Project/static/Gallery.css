@@ -1,0 +1,93 @@
+
+.header-section{
+    margin-top: 30px;
+    text-align: center;
+}
+.main-header h2 {
+    font-size: 2rem;
+    margin-bottom: 15px; /* Adjust the margin as needed for the desired distance */
+    position: relative;
+    display: inline-block;
+}
+
+.main-header h2::after {
+    content: "";
+    position: absolute;
+    bottom: -7px; /* Adjust this value for the desired distance */
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid orange;
+    width: 45%;
+}
+.title-gallery{
+    font-size: 1rem;
+    /* font-weight: 100; */
+    margin-bottom: 12px; /* Adjust the margin as needed for the desired distance */
+    position: relative;
+    display: inline-block;
+}
+.title-gallery::after{
+    content: "";
+    position: absolute;
+    bottom: 8px; /* Adjust this value for the desired distance */
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid orange;
+    /* width: 45%; */
+}
+.example{
+    text-align: center;
+    /* border: 2px solid #ff6a0d; */
+    width: 70%;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.698);
+    transition: transform 0.3s ease, background-color 0.3s ease, border 0.3s ease;
+
+
+}
+.example:hover{
+    background-color: #ff6a0d;
+    color: white;
+}
+.example:hover span{
+    color: rgb(77, 70, 70);
+}
+.example:hover .images-gallery h2::after{
+    border-bottom: 2px solid white;
+}
+.example:hover .title-gallery::after{
+    border-bottom: 2px solid white;
+}
+.example span{
+    color: #ff6a0d;
+}
+.img-container img{
+    width: 250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.698);
+
+}
+.images-gallery{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.images-gallery h2{
+    font-weight: 200;
+    font-size: 1em;
+    text-align: left;
+    position: relative;
+    display: block;
+    margin-bottom: 12px;
+    
+}
+.images-gallery h2::after{
+    content: "";
+    position: absolute;
+    bottom: -9px; /* Adjust this value for the desired distance */
+    left: 0;
+    width: 45%;
+    border-bottom: 2px solid orange;
+}
